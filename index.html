@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Weekend 1 Assignment</title>
+  <script src="vendor/jquery.js" charset="utf-8"></script>
+  <script src="client.js" charset="utf-8"></script>
+</head>
+<body>
+  <h2>Employee Salary Calculator</h2>
+  <label for="firstName">First Name</label>
+  <input type="text" name="firstName" placeholder="First Name" id="firstName" class="inputForm">
+  <label for="lastName">Last Name</label>
+  <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="inputForm">
+  <label for="idNumber">ID Number</label>
+  <input type="number" name="idNumber "id="idNumber" placeholder="ID Number" class="inputForm">
+  <label for="jobTitle">Job Title</label>
+  <input type="text" name="jobTitle "id="jobTitle" placeholder="Job Title" class="inputForm">
+  <label for="annualSalary">Annual Salary</label>
+  <input type="number" name="annualSalary" id="annualSalary" placeholder="Annual Salary" class="inputForm">
+  <button type="button" id="submitButton">Submit</button>
+
+  <h3>Employee List</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Annual Salary</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="employeeTable">
+    </tbody>
+  </table>
+</body>
+</html>
