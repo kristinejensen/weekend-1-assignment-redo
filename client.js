@@ -6,23 +6,19 @@ $(document).ready(function(){
     var jobTitle = $('#jobTitle').val();
     var annualSalary = $('#annualSalary').val();
 
-    $('employeeTable').append('<tr>'
-      '<td>' + firstName + '</td>'
-      '<td>' + lastName + '</td>'
-      '<td>'+ idNumber + '</td>'
-      '<td>' + jobTitle + '</td>'
-      '<td>' + annualSalary + '</td>'
-      '<td>< button class="deleteButton" data-salary"' + annualSalary + '">Delete ' + firstName + '</button></td' + '</tr>');
+    $('#employeeTable').append('<tr>' +
+      '<td>' + firstName + '</td>' +
+      '<td>' + lastName + '</td>' +
+      '<td>'+ idNumber + '</td>' +
+      '<td>' + jobTitle + '</td>' +
+      '<td>' + annualSalary + '</td>' +
+      '</tr>');
 
+    var monthlySalaryExpenditures = annualSalary / 12;
+    var previousSalaryTotal = $('#monthlyExpenses').text();
+    var totalMonthlyExpenses = parseFloat(previousSalaryTotal) + monthlySalaryExpenditures;
+    $('#monthlyExpenses').text(totalMonthlyExpenses);
 
-    var monthlySalaryExpenditures = parseInt($('#annualSalary').val()) / 12;
-    $('#monthlySalaryCost').append(monthlySalaryExpenditures);
-
-
-    $('input').val('')
-  });
-
-  $('#nameContainer').on('click', '.deleteButton', function(){
-    $(this).parent().remove();
+    $('input').val('');
   });
 });
